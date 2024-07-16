@@ -185,15 +185,6 @@
     border-radius: 5px;
 }
 
-.image-button-container {
-  position: relative; /* Allows absolute positioning of child elements */
-}
-
-.image-button-container img {
-  width: 100%; /* Adjust width as needed */
-  height: auto;
-}
-
 .hover-text {
   position: absolute;
   top: 50%;
@@ -212,6 +203,14 @@
 .image-button-container img {
   width: 150px;
   height: 80px;
+}
+.image-button-container {
+  position: relative; /* Allows absolute positioning of child elements */
+  border: 2px solid transparent; /* Set a transparent border initially */
+}
+
+.image-button-container:hover {
+  border-color: white; /* Change border color to white on hover */
 }
     </style>
     <link rel="stylesheet" href="assets/css/slider.css" />
