@@ -185,40 +185,62 @@
     border-radius: 5px;
 }
 
-.hover-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);  /* Center the text within the image */
-  visibility: hidden;
-  opacity: 0;
-  transition: visibility 0.2s ease-in-out, opacity 0.2s ease-in-out;
-  /* Style the text as desired (font size, color, etc.) */
+.image {
+	position: relative;
+	width: 400px;
 }
 
-.image-button-container:hover .hover-text {
-  visibility: visible;
-  opacity: 1;
-}
-.image-button-container img {
-  width: 150px; /* Adjust width as desired */
-  height: 80px; /* Adjust height as desired */
-  margin: -1px;  /* Negative margin to compensate for border */
-}
-.image-button-container {
-  position: relative; /* Allows absolute positioning of child elements */
-  border: 2px solid transparent; /* Set a transparent border initially */
+.image__img {
+	display: block;
+	width: 100%;
 }
 
-.image-button-container:hover {
-  border-color: white; /* Change border color to white on hover */
+.image__overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.6);
+	color: #ffffff;
+	font-family: 'Quicksand', sans-serif;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	opacity: 0;
+	transition: opacity 0.25s;
 }
-.image-button {
-  width: 150px; /* Adjust width as desired */
-  height: 80px; /* Adjust height as desired */
-  outline: none; /* Remove default button outline */
-  box-shadow: inset 0 0 0 1px white; /* Create a 1px white inset outline */
-  padding: 1px; /* Add a small padding to push content slightly inside */
+
+.image__overlay--blur {
+	backdrop-filter: blur(5px);
+}
+
+.image__overlay--primary {
+	background: #009578;
+}
+
+.image__overlay>* {
+	transform: translateY(20px);
+	transition: transform 0.25s;
+}
+
+.image__overlay:hover {
+	opacity: 1;
+}
+
+.image__overlay:hover>* {
+	transform: translateY(0);
+}
+
+.image__title {
+	font-size: 2em;
+	font-weight: bold;
+}
+
+.image__description {
+	font-size: 1.25em;
+	margin-top: 0.25em;
 }
     </style>
     <link rel="stylesheet" href="assets/css/slider.css" />
@@ -297,10 +319,15 @@
                     </div>     
               </div>
               <div class="carousel-item">
-                <div class="image-button-container">
-                    <img src="/Images/test.png" alt="Button image description">
-                    <span class="hover-text">Test</span>
-                  </div>
+                <div class="image">
+                    <img class="image__img" src="/Images/test.png" alt="Bricks">
+                    <div class="image__overlay image__overlay--primary">
+                        <div class="image__title">Bricks</div>
+                        <p class="image__description">
+                            Here we have a brick wall.
+                        </p>
+                    </div>
+                </div>
               </div>
             </div>
             <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
