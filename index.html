@@ -115,19 +115,22 @@
   width: 10px;
 }
 
-/* Track */
-::-webkit-scrollbar-track {
-  background: #000000;
+body {
+    /* Apply custom scrollbar to the entire page */
+    scrollbar-width: thin;
+    scrollbar-color: #aaa #363636;
 }
 
-/* Handle */
+/* Style for the scrollbar track */
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: transparent;
+}
+
+/* Style for the scrollbar thumb (the draggable part) */
 ::-webkit-scrollbar-thumb {
-  background: #727272;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #727272;
+    background-color: #aaa;
+    border-radius: 5px;
 }
 
     </style>
