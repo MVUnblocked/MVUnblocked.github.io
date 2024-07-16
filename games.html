@@ -185,6 +185,31 @@
     border-radius: 5px;
 }
 
+.image-button-container {
+  position: relative; /* Allows absolute positioning of child elements */
+}
+
+.image-button-container img {
+  width: 100%; /* Adjust width as needed */
+  height: auto;
+}
+
+.hover-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);  /* Center the text within the image */
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.2s ease-in-out, opacity 0.2s ease-in-out;
+  /* Style the text as desired (font size, color, etc.) */
+}
+
+.image-button-container:hover .hover-text {
+  visibility: visible;
+  opacity: 1;
+}
+
     </style>
     <link rel="stylesheet" href="assets/css/slider.css" />
 </head>
@@ -367,6 +392,15 @@ function setFavicon(faviconUrl) {
         document.documentElement.style.setProperty('--scroll-percentage', `${scrollPercentage}%`);
     });
 
+    const container = document.querySelector('.image-button-container');
+
+container.addEventListener('mouseover', () => {
+  container.style.backgroundColor = 'lightgray'; // Change background color on hover
+});
+
+container.addEventListener('mouseout', () => {
+  container.style.backgroundColor = 'transparent'; // Reset background color on mouseout
+});
 
     </script>
 </body>
