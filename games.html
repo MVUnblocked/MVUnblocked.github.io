@@ -12,19 +12,19 @@
         /* Your existing CSS styles */
 
         body {
-    font-family: "Poppins", sans-serif;
-    background-image: url("/Images/Background.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    color: white;
-}
+            font-family: "Poppins", sans-serif;
+            background-image: url("/Images/Background.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            color: white;
+        }
 
-h1, h4, h5, h6 {
-    color: rgb(255, 255, 255);
-}
+        h1, h4, h5, h6 {
+            color: rgb(255, 255, 255);
+        }
 
-.button {
+        .button {
     display: inline-block;
     padding: 10px 20px;
     background-color: #c1c1c1;
@@ -36,81 +36,81 @@ h1, h4, h5, h6 {
     transition: background-color 0.3s ease;
 }
 
+
+
 .button:hover {
     background-color: rgb(185, 182, 182);
 }
 
 .button img {
-    max-width: 100px;
+    max-width: 100px; /* Adjust the image width as needed */
     height: auto;
     margin-bottom: 5px;
 }
 
 .button h4 {
     margin: 0;
-    font-size: 18px;
+    font-size: 18px; /* Adjust the font size as needed */
     font-weight: bold;
 }
 
 .button p {
     margin: 0;
-    font-size: 14px;
+    font-size: 14px; /* Adjust the font size as needed */
     font-weight: normal;
     text-align: center;
 }
 
-.link-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-    max-width: 800px;
-    margin: 0 auto;
-}
 
-.link-item {
-    flex: 1;
-    margin: 10px;
-}
+        .link-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
 
-.passcode-container {
-    margin-top: 20px;
-}
+        .link-item {
+            flex: 0 0 calc(25% - 20px);
+            margin: 10px;
+        }
 
-.countdown-container {
-    display: none;
-    margin-top: 20px;
-}
+        .passcode-container {
+            margin-top: 20px;
+        }
 
-.toolbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: rgba(0, 0, 0, 0.7);
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-}
+        .countdown-container {
+            display: none;
+            margin-top: 20px;
+        }
 
-.logo {
-    width: 30px;
-    height: auto;
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
-
-.nav-link {
-    color: white;
-    text-decoration: none;
-}
-
-.header-container {
+        /* New styles for the navigation toolbar */
+        .toolbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+        }
+        .logo {
+            width: 30px;
+            height: auto;
+        }
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+        .nav-link {
+            color: white;
+            text-decoration: none;
+        }
+        .header-container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -132,114 +132,112 @@ h1, h4, h5, h6 {
     font-size: 110px;
     font-weight: bolder;
 }
-
 .centered-text h2 {
     margin: 0;
     font-size: 50px;
     font-weight: normal;
 }
-
 .category-buttons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    margin: 40px 0;
-}
+            display: flex;
+            justify-content: center;
+            align-items: center; /* Center items vertically */
+            flex-wrap: wrap; /* Allow multiple rows */
+            margin: 40px 0; /* Adjust the top margin as needed */
+        }
 
-.category-button {
-    background-color: #c1c1c1;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    margin: 0 10px;
-    border-radius: 4px;
-}
+        .category-button {
+            background-color: #c1c1c1;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin: 0 10px;
+            border-radius: 4px;
+        }
 
-#random-button {
-    background-color: #c1c1c1;
-    font-size: 18px;
-    padding: 15px 30px;
-    position: relative;
-    z-index: 2;
-    border-radius: 4px;
-}
-
-.category-button.active {
-    background-color: #6e8bfa;
-}
-
-body {
+        #random-button {
+            background-color: #c1c1c1; /* Adjust color as needed */
+            font-size: 18px; /* Adjust font size as needed */
+            padding: 15px 30px; /* Adjust padding as needed */
+            position: relative;
+            z-index: 2; /* Brings the button to the front */
+            border-radius: 4px;
+        }
+        .category-button.active {
+            background-color: #6e8bfa; /* Change this color to your desired selected color */
+        }
+        body {
+    /* Apply custom scrollbar to the entire page */
     scrollbar-width: thin;
     scrollbar-color: #000000 #363636;
 }
 
+/* Style for the scrollbar track */
 ::-webkit-scrollbar {
     width: 10px;
     background-color: transparent;
 }
 
+/* Style for the scrollbar thumb (the draggable part) */
 ::-webkit-scrollbar-thumb {
     background-color: #aaa;
     border-radius: 5px;
 }
 
 .image {
-    position: relative;
-    width: 200px;
+	position: relative;
+	width: 200px;
 }
 
 .image__img {
-    display: block;
-    width: 100%;
+	display: block;
+	width: 100%;
 }
 
 .image__overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.6);
-    color: #ffffff;
-    font-family: 'Quicksand', sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    transition: opacity 0.25s;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.6);
+	color: #ffffff;
+	font-family: 'Quicksand', sans-serif;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	opacity: 0;
+	transition: opacity 0.25s;
 }
 
 .image__overlay--blur {
-    backdrop-filter: blur(5px);
+	backdrop-filter: blur(5px);
 }
 
 .image__overlay>* {
-    transform: translateY(20px);
-    transition: transform 0.25s;
+	transform: translateY(20px);
+	transition: transform 0.25s;
 }
 
 .image__overlay:hover {
-    opacity: 1;
+	opacity: 1;
 }
 
 .image__overlay:hover>* {
-    transform: translateY(0);
+	transform: translateY(0);
 }
 
 .image__title {
-    font-size: 2em;
-    font-weight: bold;
+	font-size: 2em;
+	font-weight: bold;
 }
 
 .image__description {
-    font-size: 1.25em;
-    margin-top: 0.25em;
+	font-size: 1.25em;
+	margin-top: 0.25em;
 }
-
     </style>
     <link rel="stylesheet" href="assets/css/slider.css" />
 </head>
@@ -308,15 +306,15 @@ body {
                     </div>     
               </div>
               <div class="carousel-item">
-                <div class="image">
-                    <img class="image__img" src="/Images/test.png" alt="Bricks">
-                    <div class="image__overlay image__overlay--primary">
-                        <div class="image__title">Doge Miner 2</div>
-                        <p class="image__description">
-                            Created by the Doge Team
-                        </p>
-                    </div>
-                </div>
+                <div class="link-container">
+                        <a href="/gameassets/learn2fly" class="button">
+                            <img src="/img/images (4).jpeg" alt="learn to fly">
+                            <h4>Test 2</h4>
+                            <p>Test</p>
+                        </a>
+                    </div>     
+              </div>
+
                     <div class="carousel-item">
                         <div class="image">
                             <img class="image__img" src="/Images/test.png" alt="Bricks">
