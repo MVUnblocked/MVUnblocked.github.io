@@ -25,40 +25,42 @@
         }
 
         .button {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #c1c1c1;
-            color: white;
-            text-decoration: none;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #c1c1c1;
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
 
-        .button:hover {
-            background-color: rgb(185, 182, 182);
-        }
 
-        .button img {
-            max-width: 100px; /* Adjust the image width as needed */
-            height: auto;
-            margin-bottom: 5px;
-            border-radius: 4px; /* Rounded corners for the image */
-        }
 
-        .button h4 {
-            margin: 0;
-            font-size: 18px; /* Adjust the font size as needed */
-            font-weight: bold;
-        }
+.button:hover {
+    background-color: rgb(185, 182, 182);
+}
 
-        .button p {
-            margin: 0;
-            font-size: 14px; /* Adjust the font size as needed */
-            font-weight: normal;
-            text-align: center;
-        }
+.button img {
+    max-width: 100px; /* Adjust the image width as needed */
+    height: auto;
+    margin-bottom: 5px;
+}
+
+.button h4 {
+    margin: 0;
+    font-size: 18px; /* Adjust the font size as needed */
+    font-weight: bold;
+}
+
+.button p {
+    margin: 0;
+    font-size: 14px; /* Adjust the font size as needed */
+    font-weight: normal;
+    text-align: center;
+}
+
 
         .link-container {
             display: grid;
@@ -67,98 +69,207 @@
             max-width: 800px;
             margin: 0 auto;
         }
+        
 
-        .image {
-            position: relative;
-            width: 200px;
-            overflow: hidden;
-            border-radius: 8px; /* Rounded corners for the image container */
+        .link-item {
+            flex: 0 0 calc(25% - 20px);
+            margin: 10px;
         }
 
-        .image__img {
-            display: block;
-            width: 100%;
-            border-radius: 8px; /* Rounded corners for the image */
+        .passcode-container {
+            margin-top: 20px;
         }
 
-        .image__overlay {
-            position: absolute;
+        .countdown-container {
+            display: none;
+            margin-top: 20px;
+        }
+
+        /* New styles for the navigation toolbar */
+        .toolbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            position: fixed;
             top: 0;
             left: 0;
             width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.6);
-            color: #ffffff;
-            font-family: 'Quicksand', sans-serif;
+        }
+        .logo {
+            width: 30px;
+            height: auto;
+        }
+        .nav-links {
+            list-style: none;
             display: flex;
-            flex-direction: column;
-            align-items: center;
+            gap: 20px;
+        }
+        .nav-link {
+            color: white;
+            text-decoration: none;
+        }
+        .header-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.centered-text {
+    background-color: none;
+    padding: 10px;
+    border-radius: 4px;
+    display: block;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.centered-text h1 {
+    margin: 0;
+    font-size: 110px;
+    font-weight: bolder;
+}
+.centered-text h2 {
+    margin: 0;
+    font-size: 50px;
+    font-weight: normal;
+}
+.category-buttons {
+            display: flex;
             justify-content: center;
-            opacity: 0;
-            transition: opacity 0.25s;
+            align-items: center; /* Center items vertically */
+            flex-wrap: wrap; /* Allow multiple rows */
+            margin: 40px 0; /* Adjust the top margin as needed */
         }
 
-        .image__overlay>* {
-            transform: translateY(20px);
-            transition: transform 0.25s;
+        .category-button {
+            background-color: #c1c1c1;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin: 0 10px;
+            border-radius: 4px;
         }
 
-        .image__overlay:hover {
-            opacity: 1;
+        #random-button {
+            background-color: #c1c1c1; /* Adjust color as needed */
+            font-size: 18px; /* Adjust font size as needed */
+            padding: 15px 30px; /* Adjust padding as needed */
+            position: relative;
+            z-index: 2; /* Brings the button to the front */
+            border-radius: 4px;
         }
-
-        .image__overlay:hover>* {
-            transform: translateY(0);
+        .category-button.active {
+            background-color: #6e8bfa; /* Change this color to your desired selected color */
         }
-
-        .image__title {
-            font-size: 2em;
-            font-weight: bold;
-        }
-
-        .image__description {
-            font-size: 1.25em;
-            margin-top: 0.25em;
-        }
-
-        .btn-group button {
-            background-color: #04AA6D; /* Green background */
-            border: 1px solid green; /* Green border */
-            color: white; /* White text */
-            padding: 10px 24px; /* Some padding */
-            cursor: pointer; /* Pointer/hand icon */
-            float: left; /* Float the buttons side by side */
-            border-radius: 4px; /* Rounded corners for the button */
-        }
-
-        .btn-group button:not(:last-child) {
-            border-right: none; /* Prevent double borders */
-        }
-
-        /* Clear floats (clearfix hack) */
-        .btn-group:after {
-            content: "";
-            clear: both;
-            display: table;
-        }
-
         body {
-            /* Apply custom scrollbar to the entire page */
-            scrollbar-width: thin;
-            scrollbar-color: #000000 #363636;
-        }
+    /* Apply custom scrollbar to the entire page */
+    scrollbar-width: thin;
+    scrollbar-color: #000000 #363636;
+}
 
-        /* Style for the scrollbar track */
-        ::-webkit-scrollbar {
-            width: 10px;
-            background-color: transparent;
-        }
+/* Style for the scrollbar track */
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: transparent;
+}
 
-        /* Style for the scrollbar thumb (the draggable part) */
-        ::-webkit-scrollbar-thumb {
-            background-color: #aaa;
-            border-radius: 5px;
-        }
+/* Style for the scrollbar thumb (the draggable part) */
+::-webkit-scrollbar-thumb {
+    background-color: #aaa;
+    border-radius: 5px;
+}
+
+.button-link {
+    display: inline-block; /* Ensure the link behaves like a block element with set dimensions */
+    border-radius: 10px; /* Adjust the value to control the amount of rounding */
+    overflow: hidden; /* Ensure any child elements don't protrude beyond the rounded corners */
+    text-decoration: none; /* Remove underline by default */
+}
+
+.image {
+    position: relative; /* Ensure overlay positioning relative to this container */
+    overflow: hidden; /* Ensure the image and overlay are contained within the rounded corners */
+    border-radius: inherit; /* Inherit the border-radius from the parent <a> tag */
+}
+
+.image__img {
+    display: block;
+    width: 100%; /* Ensure the image takes up the full width of its container */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.image__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Example overlay color */
+    color: #fff; /* Example text color */
+    padding: 20px; /* Adjust as needed */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    opacity: 0; /* Initially hide overlay */
+    transition: opacity 0.3s ease; /* Smooth transition for overlay appearance */
+}
+
+.image:hover .image__overlay {
+    opacity: 1; /* Show overlay on hover */
+}
+
+
+.image__overlay--blur {
+	backdrop-filter: blur(5px);
+}
+
+.image__overlay>* {
+	transform: translateY(20px);
+	transition: transform 0.25s;
+}
+
+.image__overlay:hover {
+	opacity: 1;
+}
+
+.image__overlay:hover>* {
+	transform: translateY(0);
+}
+
+.image__title {
+	font-size: 2em;
+	font-weight: bold;
+}
+
+.image__description {
+	font-size: 1.25em;
+	margin-top: 0.25em;
+}
+.btn-group button {
+  background-color: #04AA6D; /* Green background */
+  border: 1px solid green; /* Green border */
+  color: white; /* White text */
+  padding: 10px 24px; /* Some padding */
+  cursor: pointer; /* Pointer/hand icon */
+  float: left; /* Float the buttons side by side */
+}
+
+.btn-group button:not(:last-child) {
+  border-right: none; /* Prevent double borders */
+}
+
+/* Clear floats (clearfix hack) */
+.btn-group:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
     </style>
     <link rel="stylesheet" href="assets/css/slider.css" />
 </head>
@@ -182,141 +293,143 @@
 
     <center>
         <div class="header-container">
-            <div class="centered-text">
-                <h1>
-                    <span style="color:rgb(129, 29, 42);">G</span><span style="color:rgb(172, 172, 172);">A</span>MES
-                </h1>
-            </div>
-            <div class="centered-text">
-                <h2 id="random-heading"></h2>
-            </div>
+        <div class="centered-text">
+        <h1>
+            <span style="color:rgb(129, 29, 42);">G</span><span style="color:rgb(172, 172, 172);">A</span>MES
+        </h1>
+    </div>
+        <div class="centered-text">
+        <h2 id="random-heading"></h2>
         </div>
-        
-        <div class="category-buttons">
-            <button id="random-button" data-category="random">Random Game</button>
-        </div>
+    </div>
+    
+    <div class="category-buttons">
+    <button id="random-button" data-category="random">Random Game</button>
+    </div>
 
-        <div class="category-buttons">
-            <button class="category-button" data-category="all">All</button>
-            <button class="category-button" data-category="driving">Driving</button>
-            <button class="category-button" data-category="simulation">Simulation</button>
-            <button class="category-button" data-category="sports">Sports</button>
-            <button class="category-button" data-category="multiplayer">Multiplayer</button>
-            <button class="category-button" data-category="platformer">Platformer</button>
-            <button class="category-button" data-category="puzzle">Puzzle</button>
-            <button class="category-button" data-category="flash">Flash</button>
-            <button class="category-button" data-category="miscellaneous">Miscellaneous</button>
-            <button class="category-button" data-category="emulator">Emulator</button>
-            <button class="category-button" data-category="idle">Idle</button>
-        </div>
+    <div class="category-buttons">
+        <button class="category-button" data-category="all">All</button>
+        <button class="category-button" data-category="driving">Driving</button>
+        <button class="category-button" data-category="simulation">Simulation</button>
+        <button class="category-button" data-category="sports">Sports</button>
+        <button class="category-button" data-category="multiplayer">Multiplayer</button>
+        <button class="category-button" data-category="platformer">Platformer</button>
+        <button class="category-button" data-category="puzzle">Puzzle</button>
+        <button class="category-button" data-category="flash">Flash</button>
+        <button class="category-button" data-category="miscellaneous">Miscellaneous</button>
+        <button class="category-button" data-category="emulator">Emulator</button>
+        <button class="category-button" data-category="idle">Idle</button>
+    </div>
+    <div>
+        <div id="carousel" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#carousel" data-slide-to="0" class="active"></li>
+              <li data-target="#carousel" data-slide-to="1"></li>
+              <li data-target="#carousel" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="link-container">
+                        <a href="/Games/DogeMiner2" class="button">
+                            <img src="/img/images (4).jpeg" alt="learn to fly">
+                            <h4>Doge Miner 2</h4>
+                            <p>test</p>
+                        </a>
+                    </div>     
+              </div>
+              <div class="carousel-item">
+                <div class="link-container">
+                        <a href="/gameassets/learn2fly" class="button">
+                            <img src="/img/images (4).jpeg" alt="learn to fly">
+                            <h4>Test 2</h4>
+                            <p>Test</p>
+                        </a>
+                    </div>     
+              </div>
 
-        <div>
-            <div id="carousel" class="carousel slide" data-ride="carousel">
-                <ol class="carousel-indicators">
-                    <li data-target="#carousel" data-slide-to="0" class="active"></li>
-                    <li data-target="#carousel" data-slide-to="1"></li>
-                    <li data-target="#carousel" data-slide-to="2"></li>
-                </ol>
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <div class="link-container">
-                            <a href="/Games/DogeMiner2" class="button">
-                                <img src="/img/images (4).jpeg" alt="learn to fly">
-                                <h4>Doge Miner 2</h4>
-                                <p>test</p>
-                            </a>
-                        </div>     
-                    </div>
                     <div class="carousel-item">
-                        <div class="link-container">
-                            <a href="/gameassets/learn2fly" class="button">
-                                <img src="/img/images (4).jpeg" alt="learn to fly">
-                                <h4>Test 2</h4>
-                                <p>Test</p>
-                            </a>
-                        </div>     
-                    </div>
-                    <div class="carousel-item">
-                        <div class="btn-group">
-                            <a href="/Games/DogeMiner2.html">
-                                <div class="image">
-                                    <img class="image__img" src="/Images/doge2.jpeg" alt="DogeMiner2">
-                                    <div class="image__overlay image__overlay--primary">
-                                        <div class="image__title">Doge Miner 2</div>
-                                        <p class="image__description">
-                                            Created by the Doge Team
-                                        </p>
-                                    </div>
-                                </div>
-                            </a>
-                            
+                        <div class="btn-group"
+                        <a href="/Games/DogeMiner2.html">
                             <div class="image">
-                                <img class="image__img" src="/Images/test.png" alt="Bricks">
+                                <img class="image__img" src="/Images/doge2.jpeg" alt="DogeMiner2">
                                 <div class="image__overlay image__overlay--primary">
-                                    <div class="image__title">Test</div>
+                                    <div class="image__title">Doge Miner 2</div>
                                     <p class="image__description">
-                                        Test
+                                        Created by the Doge Team
                                     </p>
                                 </div>
+                            </div>
+                        </a>
+                        
+                        <div class="image">
+                            <img class="image__img" src="/Images/test.png" alt="Bricks">
+                            <div class="image__overlay image__overlay--primary">
+                                <div class="image__title">Test</div>
+                                <p class="image__description">
+                                    Test
+                                </p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
-            </div>
-        </div>            
+            <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+    </div>            
                 
     </center>
 
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            // Retrieve and set the stored title and favicon from localStorage
-            var storedTitle = localStorage.getItem("customTitle");
-            var storedFavicon = localStorage.getItem("customFavicon");
+    // Retrieve and set the stored title and favicon from localStorage
+    var storedTitle = localStorage.getItem("customTitle");
+    var storedFavicon = localStorage.getItem("customFavicon");
 
-            if (storedTitle) {
-                document.title = storedTitle;
-            }
+    if (storedTitle) {
+        document.title = storedTitle;
+    }
 
-            if (storedFavicon) {
-                setFavicon(storedFavicon);
-            }
-        });
+    if (storedFavicon) {
+        setFavicon(storedFavicon);
+    }
+});
 
-        function setFavicon(faviconUrl) {
-            var favicon = document.querySelector('link[rel="shortcut icon"]');
-            if (favicon) {
-                favicon.href = faviconUrl;
-            }
-        }
+function setFavicon(faviconUrl) {
+    var favicon = document.querySelector('link[rel="shortcut icon"]');
+    if (favicon) {
+        favicon.href = faviconUrl;
+    }
+}
 
-        document.addEventListener("DOMContentLoaded", function() {
+         document.addEventListener("DOMContentLoaded", function() {
             const categoryButtons = document.querySelectorAll('.category-button');
             const linkItems = document.querySelectorAll(".link-item");
             
             
             categoryButtons.forEach(button => {
-                button.addEventListener('click', () => {
-                    categoryButtons.forEach(btn => btn.classList.remove('active'));
-                    button.classList.add('active');
-                    
-                    const selectedCategory = button.dataset.category;
+    button.addEventListener('click', () => {
+        categoryButtons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+        
+        const selectedCategory = button.dataset.category;
 
-                    linkItems.forEach(function(linkItem) {
-                        const categories = (linkItem.getAttribute("data-categories") || "").split(" ");
-                        
-                        if (selectedCategory === "all" || categories.includes(selectedCategory)) {
-                            linkItem.style.display = "block";
-                        } else {
-                            linkItem.style.display = "none";
-                        }
+        linkItems.forEach(function(linkItem) {
+            const categories = (linkItem.getAttribute("data-categories") || "").split(" ");
+            
+            if (selectedCategory === "all" || categories.includes(selectedCategory)) {
+                linkItem.style.display = "block";
+            } else {
+                linkItem.style.display = "none";
+            }
+
+                   
+                       
                     });
                 });
             });
@@ -330,7 +443,6 @@
                 }
             });
         });
-
         var headings = [
             "Welcome to the coal mines!",
             "¯\_(ツ)_/¯",
@@ -352,14 +464,16 @@
         // Set a random heading on page load
         window.onload = setRandomHeading;
         
-        const contentContainer = document.body;
+    const contentContainer = document.body;
 
-        contentContainer.addEventListener('scroll', function() {
-            const scrollPercentage = (contentContainer.scrollTop / (contentContainer.scrollHeight - contentContainer.clientHeight)) * 100;
-            document.documentElement.style.setProperty('--scroll-percentage', `${scrollPercentage}%`);
-        });
+    contentContainer.addEventListener('scroll', function() {
+        const scrollPercentage = (contentContainer.scrollTop / (contentContainer.scrollHeight - contentContainer.clientHeight)) * 100;
+        document.documentElement.style.setProperty('--scroll-percentage', `${scrollPercentage}%`);
+    });
 
-        const container = document.querySelector('.image-button-container');
+    const container = document.querySelector('.image-button-container');
+
+
 
     </script>
 </body>
