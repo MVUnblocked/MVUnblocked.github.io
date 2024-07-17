@@ -1,173 +1,52 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Microsoft – Cloud, Computers, Apps & Gaming</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Eaglercraft is real Minecraft 1.5.2 that you can play in any regular web browser. That includes school chromebooks, it works on all chromebooks. It supports both singleplayer and multiplayer with no extensions." />
-    <meta name="keywords" content="minecraft, eaglercraft, singleplayer, applet, replit, browser, html5, javascript, chromebook, lax1dude, games, eagler" />
-    <meta name="author" content="lax1dude" />
-    <meta property="og:title" content="Eaglercraft" />
-    <meta property="og:locale" content="en-US" />
-    <meta property="og:type" content="website" />
-    <link rel="shortcut icon" type="image/jpg" href="/MVLogo.ico"/>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6553820111354942" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="classes.js"></script>
-    <script type="text/javascript" src="eagswebrtc.js"></script>
-    <script type="text/javascript">
-        if(document.location.href.startsWith("file:")) {
-            alert("You cannot 'open' this file in your browser, the code doesn't work. Upload this folder to your HTTP(s) server and access it via the internet to launch the stable-download game. This is not a bug, please read the documentation");
-        } else {
-            window.addEventListener("load", function(){
-                const relayId = Math.floor(Math.random() * 3);
-                window.eaglercraftOpts = {
-                    container: "game_frame", 
-                    assetsURI: "assets.epk", 
-                    serverWorkerURI: "worker_bootstrap.js", 
-                    worldsFolder: "MAIN",
-                    servers: [
-                        { serverName: "placeholder", serverAddress: "address here", hideAddress: false }
-                    ],
-                    relays: [
-                        { addr: "wss://relay.deev.is/", name: "lax1dude relay #1", primary: relayId == 0 },
-                        { addr: "wss://relay.lax1dude.net/", name: "lax1dude relay #2", primary: relayId == 1 },
-                        { addr: "wss://relay.shhnowisnottheti.me/", name: "ayunami relay #1", primary: relayId == 2 }
-                    ],
-                    mainMenu: { splashes: [
-                        "Darviglet!", "eaglerenophile!", "You Eagler!", "Yeeeeeee!", "yeee",
-                        "EEEEEEEEE!", "You Darvig!", "You Vigg!", ":>", "|>", "You Yumpster!"
-                    ], eaglerLogo: false }
-                };
-                (function(){
-                    var q = window.location.search;
-                    if(typeof q === 'string' && q.startsWith("?")) {
-                        q = new URLSearchParams(q);
-                        var s = q.get("server");
-                        if(s) window.eaglercraftOpts.joinServer = s;
-                    }
-                })();
-                main();
-            });
-        }
-    </script>
-    <style>
-        body {
-            font-family: "Poppins", sans-serif;
-            background-image: url("/Images/Background.png");
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
-            color: white;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            overflow: hidden;
-        }
-
-        h1, h4, h5, h6 {
-            color: white;
-        }
-
-        .button {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #c1c1c1;
-            color: white;
-            text-decoration: none;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        .button:hover {
-            background-color: rgb(185, 182, 182);
-        }
-
-        .link-container {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .link-item {
-            flex: 0 0 calc(25% - 20px);
-            margin: 10px;
-        }
-
-        .passcode-container {
-            margin-top: 20px;
-        }
-
-        .countdown-container {
-            display: none;
-            margin-top: 20px;
-        }
-
-        .toolbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 20px;
-            background-color: rgba(0, 0, 0, 0.7);
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-        }
-
-        .logo {
-            width: 30px;
-            height: auto;
-        }
-
-        .nav-links {
-            list-style: none;
-            display: flex;
-            gap: 20px;
-        }
-
-        .nav-link {
-            color: white;
-            text-decoration: none;
-        }
-
-        .center-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .game-frame {
-            width: 800px;
-            height: 500px;
-            border: 1px solid black;
-            position: relative;
-        }
-    </style>
+<title>eagler</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Eaglercraft is real Minecraft 1.5.2 that you can play in any regular web browser. That includes school chromebooks, it works on all chromebooks. It supports both singleplayer and multiplayer with no extensions." />
+<meta name="keywords" content="minecraft, eaglercraft, singleplayer, applet, replit, browser, html5, javascript, chromebook, lax1dude, games, eagler" />
+<meta name="author" content="lax1dude" />
+<meta property="og:title" content="Eaglercraft" />
+<meta property="og:locale" content="en-US" />
+<meta property="og:type" content="website" />
+<!-- Change this: <meta property="og:image" content="https://media.discordapp.net/attachments/378764518081429506/932053915061587978/thumbnail2.png" /> -->
+<meta property="og:description" content="Eaglercraft is real Minecraft 1.5.2 that you can play in any regular web browser. That includes school chromebooks, it works on all chromebooks. It supports both singleplayer and multiplayer with no extensions." />
+<!-- Change this: <meta property="og:url" content="https://g.eags.us/eaglercraft/" /> -->
+<script type="text/javascript" src="classes.js"></script>
+<script type="text/javascript" src="eagswebrtc.js"></script>
+<script type="text/javascript">
+if(document.location.href.startsWith("file:")) {
+alert("You cannot 'open' this file in your browser, the code doesn't work. Upload this folder to your HTTP(s) server and access it via the internet to launch the stable-download game. This is not a bug, please read the documentation");
+}else {
+window.addEventListener("load", function(){
+const relayId = Math.floor(Math.random() * 3);
+window.eaglercraftOpts = {
+container: "game_frame", assetsURI: "assets.epk", serverWorkerURI: "worker_bootstrap.js", worldsFolder: "MAIN",
+servers: [
+	{ serverName: "placeholder", serverAddress: "address here", hideAddress: false }
+],
+relays: [
+	{ addr: "wss://relay.deev.is/", name: "lax1dude relay #1", primary: relayId == 0 },
+	{ addr: "wss://relay.lax1dude.net/", name: "lax1dude relay #2", primary: relayId == 1 },
+	{ addr: "wss://relay.shhnowisnottheti.me/", name: "ayunami relay #1", primary: relayId == 2 }
+],
+mainMenu: { splashes: [
+"Darviglet!", "eaglerenophile!", "You Eagler!", "Yeeeeeee!", "yeee",
+"EEEEEEEEE!", "You Darvig!", "You Vigg!", ":>", "|>", "You Yumpster!"
+], eaglerLogo: false }};
+(function(){
+var q = window.location.search;
+if(typeof q === 'string' && q.startsWith("?")) {
+	q = new URLSearchParams(q);
+	var s = q.get("server");
+	if(s) window.eaglercraftOpts.joinServer = s;
+}
+})();
+main();
+});}
+</script>
 </head>
-<body>
-<div class="toolbar">
-    <img class="logo" src="/MVLogo.ico" alt="Logo">
-    <ul class="nav-links">
-        <li><a class="nav-link" href="/">Home</a></li>
-        <li><a class="nav-link" href="/games">Games</a></li>
-        <li><a class="nav-link" href="/faq">FAQ</a></li>
-        <li><a class="nav-link" href="/changelog">Changelog</a></li>
-        <li><a class="nav-link" href="/settings">Settings</a></li>
-    </ul>
-</div>
-
-<div class="center-container">
-    <h1>Minecraft</h1>
-    <h1>Created by Mojang</h1>
-    <div class="game-frame" id="game_frame"></div>
-</div>
+<body style="margin:0px;width:100vw;height:100vh;" id="game_frame">
 </body>
 </html>
