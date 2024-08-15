@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Microsoft – Cloud, Computers, Apps & Gaming</title>
+    <link rel="shortcut icon" type="image/jpg" href="/image-removebg-preview (57).png"/>
+    <meta name="google-site-verification" content="ZBJMRDn3iyv517rJKjM_Kv8bGIDELDMu42Nla7FUYrw" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <style>
+        /* Your existing CSS styles */
+
+        body {
+            font-family: "Poppins", sans-serif;
+            background-image: url("/desktop-wallpaper-zoom-background-nomad®-dark-website.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            color: white;
+        }
+
+        h1, h4, h5, h6 {
+            color: white;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #c1c1c1;
+            color: white;
+            text-decoration: none;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: rgb(185, 182, 182);
+        }
+
+        .link-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+
+        .link-item {
+            flex: 0 0 calc(25% - 20px);
+            margin: 10px;
+        }
+
+        .passcode-container {
+            margin-top: 20px;
+        }
+
+        .countdown-container {
+            display: none;
+            margin-top: 20px;
+        }
+
+        /* New styles for the navigation toolbar */
+        .toolbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+        }
+        .logo {
+            width: 30px;
+            height: auto;
+        }
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+        .nav-link {
+            color: white;
+            text-decoration: none;
+        }
+        .center-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        /* Styles for the Ruffle content */
+        .swf-container {
+            text-align: center;
+        }
+
+        .swf-container embed {
+            width: 620px;
+            height: 480px;
+        }
+    </style>
+</head>
+<body>
+<div class="toolbar">
+    <img class="logo" src="/image-removebg-preview (56).png" alt="Logo">
+    <ul class="nav-links">
+        <li><a class="nav-link" href="/">Home</a></li>
+        <li><a class="nav-link" href="/gamesMV.html">Games</a></li>
+        <li><a class="nav-link" href="/domain.html">Domains</a></li>
+        <li><a class="nav-link" href="/faq">FAQ</a></li>
+        <li><a class="nav-link" href="/changelog">Changelog</a></li>
+        <li><a class="nav-link" href="/settings">Settings</a></li>
+    </ul>
+</div>
+
+
+<div class="center-container">
+    <h1>Learn to Fly 3</h1>
+    <h1>The Space Race</h1>
+    <div class="swf-container">
+        <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
+        <div class="swf" dir="ltr" style="text-align: left;" trbidi="on">
+            <embed height="480" pluginspage="http://www.macromedia.com/go/getflashplayer" src="/Files/LearnToFly/LearnToFly3" type="application/x-shockwave-flash" width="620"></embed>
+        </div>
+    </div>
+</div>
+    <h1>⠀</h1>
+    <h1>⠀</h1>
+    <h1>⠀</h1>
+    <h1>⠀</h1>
+    <h1>⠀</h1>
+    <h1>⠀</h1>
+    <h1>⠀</h1>
+    <h1>⠀</h1>
+    <h1>⠀</h1>
+    <h1>⠀</h1>
+    <h1>⠀</h1>
+    <h1>⠀</h1>
+    <h1>⠀</h1>
+    <h1>⠀</h1>
+    <h1>⠀</h1>
+    <h1>⠀</h1>
+    <h1>⠀</h1>
+    <h1>⠀</h1>
+    <h1>⠀</h1>
+    <h1>⠀</h1>
+    <h1>⠀</h1>
+    <h1>⠀</h1>
+    <h1>⠀</h1>
+    <h1>⠀</h1>
+    <h1>⠀</h1>
+    <h1>⠀</h1>
+    <h1>⠀</h1>
+    <h1>⠀</h1>
+    <h1>⠀</h1>
+    <h1>⠀</h1>
+<center>
+    <h1>L + Ratio</h1>
+
+</body>
+</div>
+</html>
